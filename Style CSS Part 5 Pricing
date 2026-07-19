@@ -1,0 +1,199 @@
+/* ===================================
+   Testimonials Section
+=================================== */
+
+
+.testimonials{
+
+    padding:100px 0;
+
+    background:white;
+
+}
+
+
+
+.testimonials-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.testimonial-card{
+
+    background:#f8f9fc;
+
+    padding:35px 30px;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    position:relative;
+
+}
+
+
+
+.testimonial-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.client{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.client img{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+
+
+.client h4{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:var(--dark);
+
+}
+
+
+
+.client span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+
+
+.stars{
+
+    color:#d4af37;
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.testimonial-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ===================================
+   Contact Section
+=================================== */
+
+
+.contact-box{
+
+    margin-top:70px;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    background:var(--dark);
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.contact-box h2{
+
+    font-size:40px;
+
+    font-weight:900;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.contact-box p{
+
+    font-size:18px;
+
+    margin-bottom:30px;
+
+    opacity:.9;
+
+}
+
+
+
+.contact-btn{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:15px 40px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:900;
+
+    transition:.3s;
+
+}
+
+
+
+.contact-btn:hover{
+
+    transform:translateY(-5px);
+
+}
