@@ -613,3 +613,21 @@ footer {
 .social-icons a:hover {
     transform: translateY(-5px);
 }
+
+/* ==========================
+   Scroll Animation
+========================== */
+
+
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
