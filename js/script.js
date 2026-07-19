@@ -38,3 +38,57 @@ window.addEventListener("scroll",()=>{
 
 
 });
+
+/* ===================================
+   JavaScript Part 2
+   Scroll Animations
+=================================== */
+
+
+
+// Reveal Elements On Scroll
+
+
+const revealElements = document.querySelectorAll(
+
+    ".service-card, .about-content, .about-image, .price-card, .testimonial-card, .contact-box"
+
+);
+
+
+
+const revealOnScroll = ()=>{
+
+
+    revealElements.forEach((element)=>{
+
+
+        const elementTop = element.getBoundingClientRect().top;
+
+
+        const windowHeight = window.innerHeight;
+
+
+
+        if(elementTop < windowHeight - 100){
+
+
+            element.classList.add("fade-up");
+
+
+        }
+
+
+
+    });
+
+
+
+};
+
+
+
+window.addEventListener("scroll",revealOnScroll);
+
+
+revealOnScroll();
