@@ -1,0 +1,223 @@
+/* ===================================
+   Pricing Section VIP
+=================================== */
+
+
+.pricing{
+
+    padding:100px 0;
+
+    background:#f8f9fc;
+
+}
+
+
+
+.pricing-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.price-card{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.price-card:hover{
+
+    transform:translateY(-15px);
+
+}
+
+
+
+.price-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+
+    height:150px;
+
+    background:var(--primary);
+
+    opacity:.1;
+
+    border-radius:50%;
+
+    top:-70px;
+
+    right:-70px;
+
+}
+
+
+
+.price-card h3{
+
+    font-size:28px;
+
+    font-weight:900;
+
+    color:var(--dark);
+
+    margin-bottom:20px;
+
+}
+
+
+
+.price{
+
+    font-size:45px;
+
+    font-weight:900;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.price span{
+
+    font-size:18px;
+
+    color:#777;
+
+}
+
+
+
+.price-list{
+
+    list-style:none;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.price-list li{
+
+    padding:12px 0;
+
+    color:#666;
+
+    font-size:17px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+.price-list li::before{
+
+    content:"✓";
+
+    color:var(--primary);
+
+    font-weight:bold;
+
+    margin-left:10px;
+
+}
+
+
+
+.price-btn{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    transition:.3s;
+
+}
+
+
+
+.price-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+/* الباقة المميزة */
+
+
+.price-card.featured{
+
+    transform:scale(1.08);
+
+    border:3px solid var(--primary);
+
+}
+
+
+
+.featured-badge{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:800;
+
+}
