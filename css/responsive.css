@@ -126,3 +126,141 @@
 
 
 }
+
+/* ===================================
+   Responsive CSS Part 2
+   Services + About + Stats
+=================================== */
+
+
+/* Services */
+
+
+@media(max-width:992px){
+
+
+.services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.service-card{
+
+    padding:35px 20px;
+
+}
+
+
+
+/* About */
+
+
+.about-container{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+
+
+.about-content{
+
+    text-align:center;
+
+}
+
+
+
+.about-content h2{
+
+    font-size:36px;
+
+}
+
+
+
+.about-content p{
+
+    font-size:16px;
+
+}
+
+
+
+.about-list{
+
+    text-align:right;
+
+}
+
+
+
+/* Statistics */
+
+
+.stats-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.stat-box h3{
+
+    font-size:38px;
+
+}
+
+
+}
+
+
+
+
+
+/* Mobile */
+
+
+@media(max-width:600px){
+
+
+
+.services-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.about-image img{
+
+    border-radius:20px;
+
+}
+
+
+
+.stats-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.stat-box h3{
+
+    font-size:35px;
+
+}
+
+
+
+}
