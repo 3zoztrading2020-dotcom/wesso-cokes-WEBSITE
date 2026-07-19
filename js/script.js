@@ -92,3 +92,80 @@ window.addEventListener("scroll",revealOnScroll);
 
 
 revealOnScroll();
+
+/* ===================================
+   JavaScript Part 3
+   Back To Top + Final
+=================================== */
+
+
+
+// Back To Top Button
+
+
+const backTop = document.querySelector(".back-top");
+
+
+if(backTop){
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(window.scrollY > 400){
+
+
+        backTop.classList.add("active");
+
+
+    }else{
+
+
+        backTop.classList.remove("active");
+
+
+    }
+
+
+});
+
+
+
+backTop.addEventListener("click",(e)=>{
+
+
+    e.preventDefault();
+
+
+    window.scrollTo({
+
+
+        top:0,
+
+        behavior:"smooth"
+
+
+    });
+
+
+
+});
+
+
+}
+
+
+
+// Current Year Auto
+
+
+const year = document.querySelector(".year");
+
+
+if(year){
+
+
+    year.textContent = new Date().getFullYear();
+
+
+}
