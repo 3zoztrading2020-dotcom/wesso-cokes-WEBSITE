@@ -1,171 +1,69 @@
-/* ===================================
-   3ZOZ Trading
-   JavaScript Part 1
-=================================== */
+/* ==========================
+   Scroll Animation
+========================== */
 
 
-// Page Loaded
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-
-console.log("3ZOZ Trading Website Loaded");
-
-
-
-/* Header Scroll Effect */
-
-
-const header = document.querySelector("header");
-
-
-window.addEventListener("scroll",()=>{
-
-
-    if(window.scrollY > 50){
-
-        header.style.background = "rgba(255,255,255,.98)";
-
-    }else{
-
-        header.style.background = "rgba(255,255,255,.95)";
-
-    }
-
-
-});
-
-
-
-});
-
-/* ===================================
-   JavaScript Part 2
-   Scroll Animations
-=================================== */
-
-
-
-// Reveal Elements On Scroll
-
-
-const revealElements = document.querySelectorAll(
-
-    ".service-card, .about-content, .about-image, .price-card, .testimonial-card, .contact-box"
-
+const sections = document.querySelectorAll(
+    "section"
 );
 
 
 
-const revealOnScroll = ()=>{
+window.addEventListener("scroll", () => {
 
 
-    revealElements.forEach((element)=>{
+    sections.forEach(section => {
 
 
-        const elementTop = element.getBoundingClientRect().top;
-
+        const sectionTop = section.offsetTop;
 
         const windowHeight = window.innerHeight;
 
 
+        if(window.scrollY > sectionTop - windowHeight + 100) {
 
-        if(elementTop < windowHeight - 100){
 
-
-            element.classList.add("fade-up");
+            section.classList.add("show");
 
 
         }
 
 
-
     });
 
 
-
-};
-
-
-
-window.addEventListener("scroll",revealOnScroll);
-
-
-revealOnScroll();
-
-/* ===================================
-   JavaScript Part 3
-   Back To Top + Final
-=================================== */
-
-
-
-// Back To Top Button
-
-
-const backTop = document.querySelector(".back-top");
-
-
-if(backTop){
-
-
-window.addEventListener("scroll",()=>{
-
-
-    if(window.scrollY > 400){
-
-
-        backTop.classList.add("active");
-
-
-    }else{
-
-
-        backTop.classList.remove("active");
-
-
-    }
-
-
 });
+/* ==========================
+   WhatsApp Order Message
+========================== */
+
+
+const whatsappButtons = document.querySelectorAll(
+    ".whatsapp-btn, .whatsapp-order"
+);
 
 
 
-backTop.addEventListener("click",(e)=>{
+whatsappButtons.forEach(button => {
 
 
-    e.preventDefault();
+    button.addEventListener("click", () => {
 
 
-    window.scrollTo({
+        const message = 
+        "مرحباً Wesso Cokes 🍰%0Aأريد طلب تورتة أو حلويات وأحتاج معرفة التفاصيل.";
 
 
-        top:0,
 
-        behavior:"smooth"
+        const whatsappURL = 
+        "https://wa.me/201097990107?text=" + message;
+
+
+
+        button.href = whatsappURL;
 
 
     });
 
 
-
 });
-
-
-}
-
-
-
-// Current Year Auto
-
-
-const year = document.querySelector(".year");
-
-
-if(year){
-
-
-    year.textContent = new Date().getFullYear();
-
-
-}
