@@ -1,1 +1,257 @@
+/* ===================================
+   Hero Section Premium
+=================================== */
 
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding-top:85px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    rgba(0,0,0,.80),
+
+    rgba(0,0,0,.45)
+
+    ),
+
+    url("../images/hero-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+/* تأثير الإضاءة */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    background:var(--primary);
+
+    opacity:.15;
+
+    filter:blur(120px);
+
+    border-radius:50%;
+
+    animation:moveGlow 8s infinite alternate;
+
+}
+
+
+
+@keyframes moveGlow{
+
+
+from{
+
+    transform:translate(-150px,-100px);
+
+}
+
+
+to{
+
+    transform:translate(150px,100px);
+
+}
+
+
+}
+
+
+
+/* محتوى الهيرو */
+
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+    color:white;
+
+}
+
+
+
+.hero-logo{
+
+    width:180px;
+
+    margin-bottom:25px;
+
+    animation:float 4s infinite ease-in-out;
+
+}
+
+
+
+@keyframes float{
+
+
+0%{
+
+    transform:translateY(0);
+
+}
+
+
+50%{
+
+    transform:translateY(-15px);
+
+}
+
+
+100%{
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+.hero h1{
+
+    font-size:55px;
+
+    font-weight:900;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    opacity:.9;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* Buttons */
+
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:800;
+
+    transition:.4s;
+
+}
+
+
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.btn-outline{
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+
+
+.btn-outline:hover{
+
+    background:white;
+
+    color:#111;
+
+}
